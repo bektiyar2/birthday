@@ -10,7 +10,9 @@ document.getElementById("run-code").addEventListener("click", function() {
 });
 
 document.getElementById("surprise").addEventListener("click", function() {
-    document.getElementById("cake").classList.remove("hidden");
+    const cake = document.getElementById("cake");
+    cake.classList.remove("hidden"); // Показываем торт
+    cake.classList.add("blink"); // Добавляем мигающую анимацию
 });
 
 /* Функция для создания конфетти */
