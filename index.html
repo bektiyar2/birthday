@@ -92,4 +92,92 @@
         }
 
         .envelope.open .flap {
-            transform: rotate
+            transform: rotateX(-180deg);
+        }
+
+        .envelope.open .content {
+            display: block;
+        }
+
+        .content h1 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .signature {
+            font-style: italic;
+            color: #b45309;
+            margin-top: 15px;
+        }
+
+        /* Цветочки */
+        .flower {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: url('./static/images/flower.png') no-repeat center/cover;
+            animation: float 8s ease-in-out infinite;
+            z-index: 3;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .flower:nth-child(1) {
+            top: -20px;
+            left: 10px;
+        }
+
+        .flower:nth-child(2) {
+            top: 30px;
+            left: 90%;
+        }
+
+        .flower:nth-child(3) {
+            top: 70%;
+            left: 20%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Анимированный коллаж -->
+    <div class="collage">
+        <img src="./static/images/background1.jpg" alt="Фотография 1">
+        <img src="./static/images/background2.jpg" alt="Фотография 2">
+        <img src="./static/images/background3.jpg" alt="Фотография 3">
+    </div>
+
+    <!-- Конверт -->
+    <div class="envelope" onclick="openEnvelope()">
+        <div class="flap"></div>
+        <div class="content">
+            <h1>С Днем Рождения, Жанара!</h1>
+            <p>Пусть твоя жизнь будет наполнена счастьем, радостью и успехом! 🌟</p>
+            <p class="signature">С любовью, от команды Marc O'Polo</p>
+        </div>
+    </div>
+
+    <!-- Цветочки -->
+    <div class="flower"></div>
+    <div class="flower"></div>
+    <div class="flower"></div>
+
+    <script>
+        function openEnvelope() {
+            const envelope = document.querySelector('.envelope');
+            envelope.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
