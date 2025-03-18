@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>С Днём Рождения! 🎉</title>
+    <title>Для Жанары!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="confetti-container"></div>
 
     <div class="container">
-        <h1>🎉 С Днём Рождения, Жанара! 🎂</h1>
-        <p>Нажми кнопку, чтобы получить сюрприз!</p>
-        <button id="run-code">✨ Открыть подарок ✨</button>
-        
-        <div id="loading" class="hidden">⏳ Подождите, загружаем сюрприз...</div>
-        
-        <div id="message" class="hidden">
-            <h2>🎊 Поздравляем! 🎊</h2>
-            <p class="poem">
-                В этот чудесный день пусть сбудутся все мечты, <br>
-                Пусть радость и счастье украсят твои пути. <br>
-                Желаем улыбок, любви и веселья, <br>
-                Пусть сердце поёт от волшебного настроения!  
-            </p>
-            <p class="signature">С любовью, <br> <b>Команда Marc O'Polo 💖</b></p>
-            <button id="surprise">🎁 Получить подарок</button>
+        <div class="envelope" id="envelope">
+            <div class="envelope-top"></div>
+            <div class="envelope-body"></div>
+            <div class="card hidden" id="card">
+                <p>🎉 С Днём Рождения! 🎉<br>
+                Пусть счастье будет рядом,<br>
+                А улыбка – ярче солнца!<br>
+                Лови лучи тепла и радости! 💖</p>
+                <p class="signature">С любовью, команда Marc O'Polo</p>
+            </div>
         </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
